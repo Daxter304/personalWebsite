@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<head>	
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'></meta>	
+		<title>IDN Mopar Video Upload</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script type='application/javascript' src='functions-x.js'></script> 
+	    <style>
+	       .not_found{color:red;}
+	       #dialog_text{text-align:center;}
+	       input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		   fieldset { padding:0; border:0; margin-top:25px; }   
+	    	#select_area
+	        {
+	            width:auto;
+	    	    margin:5px;
+	    	    padding:5px 5px;
+	    	}
+	    	#auth_area
+	    	{
+	    	    align:right;
+	    	    margin:5px;
+	    		width:30%;     
+	    		padding:5px 5px;	    		  
+	    	}
+	    	td,tr,table 
+	    	{
+	        	padding : 4px;
+			}
+			table
+			{
+				border-collapse : collapse;
+				margin-top : 8px; //causes spacing between my buttons and the table below
+			}    	
+	    </style>
+  	</head>
+  	<body>
+  	   <div id='select_area'></div>
+  	   <div id='auth_area'></div>
+  	   <div id='auth_output_area'></div>
+  	   <div id='table_output_area'></div> 	
+  	   <div id='table_area'></div>	
+  	   <div id='debug_area'></div>
+       <div id="dialog-form" title="Edit video fields"></div>
+       
+       			
+	   <script type="text/javascript">		
+
+			function startup() 
+			{	
+	        	setupPage();     	   	    						
+			}	
+		
+	
+			$(document).ready(startup);
+		
+		</script>
+	</body>
+</html>

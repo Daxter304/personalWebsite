@@ -1,0 +1,74 @@
+html {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  height: 100%;
+  min-height: 100%;
+  background: url(background01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+table {
+  color: white;
+  border: 2px solid;
+}
+th, td, tr {
+  border-color: white;
+  border: 1px solid;
+}
+.editTableBtn {
+  width: 100px;
+  height: 25px;
+}
+#alertButton {
+  width: 100px;
+  height: 25px;
+}
+#myDialog {
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content {
+  color: #003;
+  font-family: Optima, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  margin: 20px 20px 20px 220px;
+  min-height: 400px;
+  max-height: 1080px;
+  height: 100%;
+}
+#footer {
+/*  color: #f5082f;*/
+  color: blue;
+  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  text-align: center;
+  background: black;
+  font-size: 20px;
+  font-family: Georgia, serif;
+}
+.astext {
+  color: #f5082f;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0 5px;
+  font-size: 20px;
+  font-family: Georgia, serif;
+}
+
+.justOne {
+  color: blue;
+}
+
+.moreThanOne {
+  color: red;
+}

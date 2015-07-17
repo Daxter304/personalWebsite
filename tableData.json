@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2",
+    "name": "Open",
+    "note": "Rights available to this group do not need a login"
+  },
+  {
+    "id": "4",
+    "name": "Admin",
+    "note": "Admin all rights"
+  },
+  {
+    "id": "5",
+    "name": "Campaign Manager",
+    "note": "Message Campaign Manager"
+  },
+  {
+    "id": "6",
+    "name": "QA",
+    "note": "Quality Assurance"
+  },
+  {
+    "id": "7",
+    "name": "Sean",
+    "note": "Dev Team Intern"
+  },
+  {
+    "id": "42",
+    "name": "Deep Thought",
+    "note": "Life, Universe and Everything"
+  }
+]

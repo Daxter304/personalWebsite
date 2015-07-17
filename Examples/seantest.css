@@ -1,0 +1,27 @@
+table{
+	color:blue;
+	border: 2px solid;
+}
+
+th, td, tr{
+	border-color:black;
+	border: 1px solid;
+}
+
+#one{
+	font-family:Impact;
+	border-color:black;
+	color:black;
+}
+
+#two{
+	font-family:Arial;
+	border-color:black;
+	color:red;
+}
+
+#three{
+	font-family:Arial;
+	border-color:black;
+	color:orange;
+}
