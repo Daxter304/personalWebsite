@@ -19,10 +19,7 @@ th, td, tr {
   border-color: white;
   border: 1px solid;
 }
-.editTableBtn {
-  width: 100px;
-  height: 25px;
-}
+
 #alertButton {
   width: 100px;
   height: 25px;
@@ -43,8 +40,7 @@ th, td, tr {
   height: 100%;
 }
 #footer {
-/*  color: #f5082f;*/
-  color: blue;
+  color: #f5082f;
   margin: 0 auto;
   width: 100%;
   position: absolute;
@@ -65,10 +61,25 @@ th, td, tr {
   font-family: Georgia, serif;
 }
 
+.editTableBtn {
+  width: 100px;
+  height: 25px;
+}
+
 .justOne {
   color: blue;
 }
 
 .moreThanOne {
   color: red;
+}
+
+.fileList {
+  margin-left: -40px;
+  list-style-type: none;
+  color:red;
+}
+
+.fileExplorerBtn {
+  width: 5em;
 }

@@ -8,12 +8,12 @@ function setupPage() {
     "<li><a id='createTableBtn'><label>Create Table</label></a></li>" +
     "<li><a id='createMyDlgBtn'><label>My Dialog Box</label></a></li>" +
     "<li><a id='createImageBtn'><label>Load Image</label></a></li>" +
-    "<li><a id='createDlgBtn'><label>Tracy's Dialog Box</label></a></li>" +
+    //"<li><a id='createDlgBtn'><label>Tracy's Dialog Box</label></a></li>" +
     "<li><a id='viewPageCSSBtn'><label>View Page CSS</label></a></li>" +
-    //"<li><a id='uploadBtn'><label>Upload To Drive</label></a></li>" +
     "<li><a id='compareBtn'><label>Comparison</label></a></li>"+
     "<li><a id='findChildBtn'><label>Find Child Elem</label></a></li>"+
-    "<li><a id='dropdownBtn'><label>Dropdown</label></a></li>"+
+    //"<li><a id='dropdownBtn'><label>Dropdown</label></a></li>"+
+    "<li><a id='fileExplorerBtn'><label>File Explorer</label></a></li>" +
     "<li><a id='clearPageBtn'><label>Clear Page</label></a></li>" +
     "</ul>");
 
@@ -48,9 +48,6 @@ function setupPage() {
     addJsonDialog();
     $('#addJsonDialog').dialog('open');
   });
-  $('#uploadBtn').click(function() {
-    window.open('/API/google-api-php-client-master/examples/fileupload.php', '_newtab');
-  });
   $(document.body).on('click', '#background1', function() {
     $(document.body).css('background', "url('background01.jpg') no-repeat center center fixed");
     $(document.body).css('background-size', "cover");
@@ -63,9 +60,13 @@ function setupPage() {
     $(document.body).css('background', "url('background03.jpg') no-repeat center center fixed");
     $(document.body).css('background-size', "cover");
   });
+
   $("#compareBtn").click(comparison);
   $('#findChildBtn').click(findChildren);
   $('#dropdownBtn').click(testDropdown);
+
+  //File explorer functions
+  fileExplorerSetup();
 }
 
 function testDropdown() {
