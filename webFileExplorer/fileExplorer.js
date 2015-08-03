@@ -1,35 +1,37 @@
 settings = {
-    currentDir: "../../files",
-    parentDir: "../.."
+    currentDir: "/"
 };
 
 function fileExplorerSetup() {
     $(document.body).on('click', '#fileExplorerBtn', function() {
-        fileExplorer(settings.currentDir);
+        fileExplorer();
     });
     $(document.body).on('click', '.deleteFileBtn', function() {
         var file = $(this).attr('data-file');
         deleteFile(file);
     });
     $(document.body).on('click', '.openFolderBtn', function() {
-        settings.parentDir = settings.currentDir;
-        settings.currentDir = $(this).attr('data-file');
-        fileExplorer();
+        //settings.currentDir = $(this).attr('data-file');
+        fileExplorer($(this).attr('data-file'));
     });
     $(document.body).on('click', '.parentDirBtn', function() {
-        //settings.parentDir = settings.currentDir;
-        settings.currentDir = $(this).attr('data-parentDir');
-        fileExplorer();
+        //settings.currentDir = dirname(settings.currentDir);
+        fileExplorer("parentDir");
     });
 }
 
-function fileExplorer() {
+function dirname(path) {
+    return path.replace(/\\/g, '/')
+        .replace(/\/[^\/]*\/?$/, '');
+}
+
+function fileExplorer(folderName) {
+    consoleLog();
     clearContentDiv();
     $.ajax({ url: "/webFileExplorer/fileExplorer.php",
         data: {
             "call": "readFiles",
-            "folder": settings.currentDir,
-            "parentDir": settings.parentDir
+            "folder": folderName
         },
         type: "GET",
         success: function(output) {
@@ -45,7 +47,6 @@ function fileExplorer() {
 function deleteFile(file) {
     var deleteFile = confirm("Are you sure you want to delete this file?");
     if (deleteFile == true){
-        //var fileName = $(this).attr('data-filename');
         $.ajax({ url: "/webFileExplorer/fileExplorer.php",
             data: {
                 "call": "deleteFile",
@@ -53,7 +54,7 @@ function deleteFile(file) {
             },
             type: "GET",
             success: function(output) {
-                console.log(output);
+                //console.log(output);
                 fileExplorer();
             },
             error: function() {
@@ -61,4 +62,19 @@ function deleteFile(file) {
             }
         });
     }
+}
+
+function consoleLog() {
+    $.ajax({ url: "/webFileExplorer/fileExplorer.php",
+        data: {
+            "call": "consoleLog"
+        },
+        type: "GET",
+        success: function(output) {
+            console.log(output);
+        },
+        error: function() {
+            window.alert("Failed to call function");
+        }
+    });
 }
